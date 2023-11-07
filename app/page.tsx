@@ -1,9 +1,9 @@
-import Image from 'next/image'
+
 
 export default function Home() {
   return (
-    <main>
-      hey my name is rahin
+    <main className="bg-[#EEF0F2] w-screen rounded-3xl">
+      <h1>hello my name is Rahin</h1>
     </main>
   )
 }
