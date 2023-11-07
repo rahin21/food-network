@@ -1,9 +1,11 @@
-
+import Settings from "@/components/Settings";
+import TabItem from "@/components/TabItem";
 
 export default function Home() {
   return (
-    <main className="bg-[#EEF0F2] w-screen rounded-3xl">
-      <h1>hello my name is Rahin</h1>
+    <main className="flex bg-[#EEF0F2] w-screen h-[93.6vh] md:rounded-tl-3xl">
+     <TabItem/>
+     <Settings/>
     </main>
-  )
+  );
 }
