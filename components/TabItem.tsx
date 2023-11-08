@@ -1,3 +1,4 @@
+"use client"
 import {
   Card,
   CardContent,
@@ -15,12 +16,12 @@ import { fruits, vegs } from "@/app/data";
 
 const TabItem = () => {
     return (
-    <div className="bg-background flex justify-center w-[300px] m-4 rounded-xl">
+    <div className=" bg-background lg:flex hidden justify-center h-[845px] w-[300px] m-4 rounded-xl">
       <Tabs defaultValue="fruits" className="w-[280px] p-2 py-4">
         <div className="border-2 border-[#e6542735] rounded-lg">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="fruits">Fruits</TabsTrigger>
-            <TabsTrigger value="vegs">Vegetables</TabsTrigger>
+            <TabsTrigger value="fruits" className="font-semibold">Fruits</TabsTrigger>
+            <TabsTrigger value="vegs" className="font-semibold">Vegetables</TabsTrigger>
           </TabsList>
         </div>
         <TabsContent value="fruits">
@@ -36,7 +37,7 @@ const TabItem = () => {
               {fruits.map((fruit, i) => (
                 <CardContent className="space-y-2 flex space-x-4 mt-3" key={i}>
                   <Image
-                    src={`/${fruit.name}.svg`}
+                    src={`/fruits/${fruit.name}.svg`}
                     alt={`${fruit.name}`}
                     width={60}
                     height={60}
@@ -67,7 +68,7 @@ const TabItem = () => {
               {vegs.map((veg, i) => (
                 <CardContent className="space-y-2 flex space-x-4 mt-3" key={i}>
                   <Image
-                    src={`/${veg.name}.png`}
+                    src={`/vegs/${veg.name}.png`}
                     alt={`${veg.name}`}
                     width={60}
                     height={50}

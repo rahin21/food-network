@@ -10,7 +10,7 @@ type SliderProps = React.ComponentProps<typeof Slider>;
 
 const Settings = ({ className, ...props }: SliderProps) => {
   return (
-    <div className="bg-background justify-center font-semibold h-[286px] w-[300px] m-4 p-4 rounded-xl">
+    <div className="hidden lg:block bg-background font-semibold h-[286px] w-[300px] m-4 p-4 rounded-xl">
       <div className="border-input border-2 rounded-xl p-3">
         <div className="flex justify-between">
           <div className="flex items-center space-x-3">
