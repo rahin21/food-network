@@ -6,7 +6,7 @@ import {IoApps} from 'react-icons/io5'
 import Button from './ui/button'
 const SideBar = () => {
   return (
-    <div className='hidden md:flex flex-col justify-center bg-card w-[4.4rem] h-[93vh]'>
+    <div className='hidden lg:flex flex-col justify-center bg-card lg:w-[4.4rem] w-[6rem] h-[93vh]'>
       <div className="flex flex-col items-center gap-[2.5rem]">
         <Button cl='text-[#101011c5] bg-[#1010101A]'><TbSmartHome/></Button> 
         <Button cl='text-[#101011c5] bg-[#1010101A]'><RiApps2Line/></Button> 

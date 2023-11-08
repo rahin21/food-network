@@ -8,7 +8,7 @@ import { BiSearch } from "react-icons/bi";
 
 const Nav = () => {
   return (
-    <div className="bg-card h-[3.75rem] flex justify-between items-center mx-5">
+    <div className="bg-card h-[3.75rem] flex justify-between items-center mx-5 sticky top-0">
       <Image
         src={"/foodNetwork.svg"}
         alt="Food Network Logo"

@@ -16,7 +16,7 @@ import { fruits, vegs } from "@/app/data";
 
 const TabItem = () => {
     return (
-    <div className=" bg-background lg:flex hidden justify-center h-[845px] w-[300px] m-4 rounded-xl">
+    <div className=" bg-background hidden lg:flex justify-center h-[845px] lg:w-[300px] md:w-[200px] m-4 rounded-xl">
       <Tabs defaultValue="fruits" className="w-[280px] p-2 py-4">
         <div className="border-2 border-[#e6542735] rounded-lg">
           <TabsList className="grid w-full grid-cols-2">
