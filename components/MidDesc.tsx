@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 const MidDesc = ({ setFoodsItemClicked, value }: React.ComponentProps<any>) => {
   const socials = ["facebook", "linkedIn", "twitter", "more"];
   const router = usePathname();
+  
   return (
     
       <motion.div

@@ -24,7 +24,7 @@ export default function Home() {
     <AnimatePresence mode={"wait"}>
       <main
         key={"/"}
-        className="flex bg-[#EEF0F2] lg:rounded-tl-3xl overscroll-y-fixed"
+        className="flex bg-input lg:rounded-tl-3xl overscroll-y-fixed"
       >
         {FoodsItemClicked ? (
           <div

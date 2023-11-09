@@ -2,14 +2,14 @@
 
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 
+import { fruits, vegs } from "@/app/data";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Image from "next/image";
-import Button from "./ui/button";
-import { BiSearch } from "react-icons/bi";
-import { fruits, vegs } from "@/app/data";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { BiSearch } from "react-icons/bi";
+import Button from "./ui/button2";
 
 type setFoodsItemClickedType = {
   FoodsItemClicked: boolean;

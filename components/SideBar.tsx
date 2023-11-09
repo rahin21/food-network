@@ -1,12 +1,13 @@
 'use client'
-import { TbSmartHome } from "react-icons/tb";
-import { RiApps2Line } from "react-icons/ri";
-import { PiPaperPlaneTiltBold } from "react-icons/pi";
-import { LuPlaySquare } from "react-icons/lu";
-import { IoApps } from "react-icons/io5";
-import Button from "./ui/button";
 import Link from "next/link";
-import {usePathname} from "next/navigation"
+import { usePathname } from "next/navigation";
+import { IoApps } from "react-icons/io5";
+import { LuPlaySquare } from "react-icons/lu";
+import { PiPaperPlaneTiltBold } from "react-icons/pi";
+import { RiApps2Line } from "react-icons/ri";
+import { TbSmartHome } from "react-icons/tb";
+import Button2 from "./ui/button2";
+import { Button } from "./ui/button";
 
 const SideBar = () => {
   const currentPath = usePathname();
@@ -23,7 +24,7 @@ const SideBar = () => {
       <div className="flex lg:flex-col items-center justify-center gap-[2.5rem]">
         {nav_items.map((nav_item, i) => (
           <Link key={i} href={nav_item?.href}>
-            <Button cl={nav_item.href === currentPath ? `text-[#ff6e3a] bg-[#e6542735]` :`text-[#101011c5] bg-[#1010101A]`}>{nav_item?.logo}</Button>
+            <Button className={`text-2xl hover:bg-input rounded-lg p-[6px] px-2 ${nav_item.href === currentPath ? `text-[#ff6e3a] bg-[#e6542735]` :` text-foreground bg-input`}`}>{nav_item?.logo}</Button>
           </Link>
         ))}
       </div>
