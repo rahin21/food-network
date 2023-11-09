@@ -1,23 +1,26 @@
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import Button from "./ui/button";
+import Link from "next/link";
+import { BiSearch } from "react-icons/bi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { HiSun } from "react-icons/hi";
 import { TbDeviceNintendo } from "react-icons/tb";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { BiSearch } from "react-icons/bi";
+import Button from "./ui/button";
 
 const Nav = () => {
   return (
     <div className="bg-card h-[3.75rem] flex justify-between items-center px-5 sticky top-0 lg:z-30 z-0">
-      <Image
-        src={"/foodNetwork.svg"}
-        alt="Food Network Logo"
-        width={80}
-        height={80}
-        style={{width:'auto', height:'auto'}}
-      />
+      <Link href={`/`} className="cursor pointer">
+        <Image
+          src={"/foodNetwork.svg"}
+          alt="Food Network Logo"
+          width={80}
+          height={80}
+          style={{ width: "auto", height: "auto" }}
+        />
+      </Link>
       <div className="hidden md:flex">
-        <Input type="text" className=" h-10 w-[24rem]"/>
+        <Input type="text" className=" h-10 w-[24rem]" />
         <Button cl="absolute mt-1 ml-[21.7rem] text-[#ff6e3a] bg-[#e6542735] rounded-md">
           <BiSearch />
         </Button>
