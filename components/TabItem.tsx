@@ -106,11 +106,11 @@ const TabItem: React.FC<setFoodsItemClickedType> = (
                       key={i}
                     >
                       <Image
-                        src={`/vegs/${veg.name}.png`}
+                        src={`/vegs/${veg.name}.svg`}
                         alt={`${veg.name}`}
-                        width={40}
-                        height={40}
-                        style={{ width: "auto", height: "auto" }}
+                        width={0}
+                        height={0}
+                        style={{ width: "23%", height: "23%" }}
                         className="ml-1 py-1"
                       />
                       <div className="space-y-1 pb-2 pl-1">
