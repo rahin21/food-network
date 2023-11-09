@@ -5,7 +5,7 @@ import { motion} from "framer-motion";
 
 const EmptyPage = () => {
   return (
-    <div className="bg-[#EEF0F2] w-full lg:rounded-tl-3xl">
+    <div className="bg-input w-full lg:rounded-tl-3xl">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
