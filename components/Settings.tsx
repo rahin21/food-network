@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import { PiTextTBold } from "react-icons/pi";
 import { IoIosArrowUp } from "react-icons/io";
 import { cn } from "@/lib/utils";
@@ -8,7 +9,8 @@ import { Switch } from "@/components/ui/switch";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 
-const Settings = ({ className, ...props }: SliderProps) => {
+const Settings = ({value, setValue}: React.ComponentProps<any>,{ className }: SliderProps) => {
+  
   return (
     <div className="hidden xl:block bg-background font-semibold h-[286px] w-[300px] m-4 p-4 rounded-xl">
       <div className="border-input border-2 rounded-xl p-3">
@@ -23,15 +25,16 @@ const Settings = ({ className, ...props }: SliderProps) => {
         </div>
         <div className="flex justify-between items-center py-4">
           <h1>Paragraph font size</h1>
-          <h1 className="text-[#ff6e3a]">19</h1>
+          <h1 className="text-[#ff6e3a]">{value}</h1>
         </div>
         <div>
           <Slider
-            defaultValue={[19]}
-            max={42}
-            step={1}
+            defaultValue={value}
+            min={10}
+            max={30}
+            step={5}
             className={cn("w-[100%]", className)}
-            {...props}
+            onValueChange={(v)=>setValue(v)}
           />
         </div>
         <VitaminChoice />

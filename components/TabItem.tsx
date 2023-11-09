@@ -1,11 +1,11 @@
 "use client"
+
 import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -13,10 +13,17 @@ import Image from "next/image";
 import Button from "./ui/button";
 import { BiSearch } from "react-icons/bi";
 import { fruits, vegs } from "@/app/data";
+import { SetStateAction } from "react";
 
-const TabItem = () => {
+type setFoodsItemClickedType ={
+  FoodsItemClicked: boolean
+}
+
+const TabItem: React.FC<setFoodsItemClickedType> = (props: setFoodsItemClickedType) => {
+
     return (
-    <div className=" bg-background hidden lg:flex justify-center h-[845px] lg:w-[300px] md:w-[200px] m-4 rounded-xl">
+
+    <div className={ `bg-background lg:flex justify-center h-[845px] w-[300px] lg:relative absolute lg:m-4 rounded-xl lg:translate-x-0 z-20 ${props.FoodsItemClicked ? `-translate-x-2 transition ease-linear duration-300 -mt-[60px]`: `-translate-x-96 transition ease-linear duration-300`}` }>
       <Tabs defaultValue="fruits" className="w-[280px] p-2 py-4">
         <div className="border-2 border-[#e6542735] rounded-lg">
           <TabsList className="grid w-full grid-cols-2">
@@ -35,15 +42,16 @@ const TabItem = () => {
             <Card >
               <Label>Fruit lists</Label>
               {fruits.map((fruit, i) => (
-                <CardContent className="space-y-2 flex space-x-4 mt-3" key={i}>
+                <CardContent className="space-y-3 flex items-center space-x-4 mt-3 transition duration-150 ease-linear" key={i}>
                   <Image
                     src={`/fruits/${fruit.name}.svg`}
                     alt={`${fruit.name}`}
-                    width={60}
-                    height={60}
+                    width={0}
+                    height={0}
+                    style={{width: '23%', height: '23%'}}
                   />
-                  <div className="space-y-1">
-                    <Label className="text-lg">
+                  <div className="space-y-1 pb-2">
+                    <Label className="text-base ">
                       {fruit.name[0].toLocaleUpperCase() + fruit.name.slice(1)}
                     </Label>
                     <CardDescription className="text-sm">
@@ -66,15 +74,17 @@ const TabItem = () => {
             <Card >
               <Label>Fruit lists</Label>
               {vegs.map((veg, i) => (
-                <CardContent className="space-y-2 flex space-x-4 mt-3" key={i}>
+                <CardContent className="space-y-3 flex items-center space-x-4 mt-3" key={i}>
                   <Image
                     src={`/vegs/${veg.name}.png`}
                     alt={`${veg.name}`}
-                    width={60}
-                    height={50}
+                    width={40}
+                    height={40}
+                    style={{width: 'auto', height: 'auto'}}
+                    className="ml-1 py-1"
                   />
-                  <div className="space-y-1">
-                    <Label className="text-lg">
+                  <div className="space-y-1 pb-2 pl-1">
+                    <Label className="text-base">
                       {veg.name[0].toLocaleUpperCase() + veg.name.slice(1)}
                     </Label>
                     <CardDescription className="text-sm">

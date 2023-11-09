@@ -8,12 +8,13 @@ import { BiSearch } from "react-icons/bi";
 
 const Nav = () => {
   return (
-    <div className="bg-card h-[3.75rem] flex justify-between items-center mx-5 sticky top-0">
+    <div className="bg-card h-[3.75rem] flex justify-between items-center px-5 sticky top-0 lg:z-30 z-0">
       <Image
         src={"/foodNetwork.svg"}
         alt="Food Network Logo"
         width={80}
         height={80}
+        style={{width:'auto', height:'auto'}}
       />
       <div className="hidden md:flex">
         <Input type="text" className=" h-10 w-[24rem]"/>
@@ -25,7 +26,7 @@ const Nav = () => {
         <Button cl="text-[#ff6e3a] bg-[#e6542735]">
           <HiSun />
         </Button>
-        <Button cl="text-[#ff6e3a] bg-[#e6542735]">
+        <Button cl="text-[#101011c5] bg-[#e6542735]">
           <TbDeviceNintendo />
         </Button>
         <Button cl="text-[#101011c5] bg-[#1010101A]">
