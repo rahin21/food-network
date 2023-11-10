@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Slider } from "@/components/ui/slider";
 import VitaminChoice from "./VitaminChoice";
 import { Switch } from "@/components/ui/switch";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 

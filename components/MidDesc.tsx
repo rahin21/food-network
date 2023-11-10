@@ -3,13 +3,13 @@ import Image from "next/image";
 import { Rating } from "@material-tailwind/react";
 import { PiStarFill, PiStarLight } from "react-icons/pi";
 import { IoIosArrowDown } from "react-icons/io";
-import { AnimatePresence,motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const MidDesc = ({ setFoodsItemClicked, value }: React.ComponentProps<any>) => {
   const socials = ["facebook", "linkedIn", "twitter", "more"];
   const router = usePathname();
-  
+  let v=`${value[0]}`;
   return (
     
       <motion.div
@@ -64,7 +64,7 @@ const MidDesc = ({ setFoodsItemClicked, value }: React.ComponentProps<any>) => {
                 </h1>
                 <div className="space-y-2">
                   <h5 className="text-lg font-bold">Supports eye health:</h5>
-                  <p className={`text-[${value[0]}px]`}>
+                  <p className={`text-[${v}px]`}>
                     Spinach contains high levels of vitamin A and other
                     antioxidants that help maintain healthy vision and protect
                     against age-related macular degeneration.
@@ -72,7 +72,7 @@ const MidDesc = ({ setFoodsItemClicked, value }: React.ComponentProps<any>) => {
                 </div>
                 <div className="space-y-2">
                   <h5 className="text-lg font-bold">Supports eye health:</h5>
-                  <p className={`text-[${value[0]}px]`}>
+                  <p className={`text-[${v}px]`}>
                     Spinach contains high levels of vitamin A and other
                     antioxidants that help maintain healthy vision and protect
                     against age-related macular degeneration.
@@ -93,7 +93,7 @@ const MidDesc = ({ setFoodsItemClicked, value }: React.ComponentProps<any>) => {
             <div className="mt-10 xl:ml-[4.2rem]">
               <div className="space-y-2 ">
                 <h5 className="text-lg font-bold">Supports eye health:</h5>
-                <p className={`text-[${value[0]}px]`}>
+                <p className={`text-[${v}px]`}>
                   Spinach contains high levels of vitamin A and other
                   antioxidants that help maintain healthy vision and protect
                   against age-related macular degeneration.. Spinach contains
@@ -126,7 +126,7 @@ const MidDesc = ({ setFoodsItemClicked, value }: React.ComponentProps<any>) => {
                 </div>
                 <div className="space-y-2 xl:mt-0 mt-10">
                   <h5 className="text-lg font-bold">Supports eye health:</h5>
-                  <p className={`text-[${value[0]}px]`}>
+                  <p className={`text-[${v}px]`}>
                     Spinach contains high levels of vitamin A and other
                     antioxidants that help maintain healthy vision and protect
                     against age-related macular degeneration.. Spinach contains
