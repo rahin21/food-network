@@ -45,7 +45,7 @@ const TabItem: React.FC<setFoodsItemClickedType> = (
           </div>
           <TabsContent value="fruits">
             <div className="flex items-center py-2 ">
-              <Input type="text" className=" h-10 w-[16.5rem] " />
+              <Input type="text" placeholder='Search by Fruits Name' className=" h-10 w-[16.5rem] " />
               <Button cl="absolute ml-[14.2rem] text-[#ff6e3a] bg-[#e6542735] rounded-sm">
                 <BiSearch />
               </Button>
@@ -87,7 +87,7 @@ const TabItem: React.FC<setFoodsItemClickedType> = (
           </TabsContent>
           <TabsContent value="vegs">
             <div className="flex items-center py-2 ">
-              <Input type="text" className=" h-10 w-[16.5rem] " />
+              <Input type="text" placeholder="Search by Vegetables Name" className=" h-10 w-[16.5rem] " />
               <Button cl="absolute ml-[14.2rem] text-[#ff6e3a] bg-[#e6542735] rounded-sm">
                 <BiSearch />
               </Button>
@@ -99,7 +99,7 @@ const TabItem: React.FC<setFoodsItemClickedType> = (
                 transition={{ duration: 1 }}
               >
                 <Card>
-                  <Label>Fruit lists</Label>
+                  <Label>Vegetable lists</Label>
                   {vegs.map((veg, i) => (
                     <CardContent
                       className="space-y-3 flex items-center space-x-4 mt-3"

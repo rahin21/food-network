@@ -9,7 +9,7 @@ import { PiStarFill, PiStarLight } from "react-icons/pi";
 const MidDesc = ({ setFoodsItemClicked, value }: React.ComponentProps<any>) => {
   const socials = ["facebook", "linkedIn", "twitter", "more"];
   const router = usePathname();
-  
+
   const test = `text-[10px]`
   const test2 = `text-[15px]`
   const test3 =`text-[20px]`

@@ -30,7 +30,7 @@ const Nav = () => {
         />
       </Link>
       <div className="hidden md:flex">
-        <Input type="text" className=" h-10 w-[24rem]" />
+        <Input type="text" placeholder='Search Best Food' className=" h-10 w-[24rem]" />
         <Button2 cl="absolute mt-1 ml-[21.7rem] text-[#ff6e3a] bg-[#e6542735] rounded-md">
           <BiSearch />
         </Button2>
